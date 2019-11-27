@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Links Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -28,6 +28,12 @@
                 align-items: center;
                 display: flex;
                 justify-content: center;
+            }
+
+            .flex-right {
+                position: fixed;
+                right: 5%;
+                top: 2%;
             }
 
             .position-ref {
@@ -63,7 +69,15 @@
             }
         </style>
     </head>
+
     <body>
+
+         {{-- Submit button --}}
+        <div class="flex-right">
+         <a href="{{ url('/submit') }}">SUBMIT</a>
+        </div>
+
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -85,14 +99,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-		    <a href="https://github.com/laravel/laravel">GitHub</a>
+                   
+		    <a href="https://github.com/SANOHIKARU">GitHub</a>
 		    @foreach ($links as $link)
 		    	<a href="{{ $link->url }}">{{ $link->title}}</a>
 		    @endforeach
